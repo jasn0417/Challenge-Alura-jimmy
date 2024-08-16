@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+}
+
+.header{
+    margin: auto;
+    width: 90%;
+    position: absolute;
+    
+}
+.logo{
+    margin: 40px;
+}
+
+.formulario{
+    display: flex;
+    gap: 70px;
+    width: 80.5%;
+    margin: auto 40px auto auto;
+    
+}
+
+.textarea__1{
+    padding-top: 144px;
+    height: 656px;
+}
+.encritador{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    width: 100%;
+    height: 690px;
+    border: none;
+    background-color: #F3F5FC;
+    text-transform: lowercase;
+    color:#0A3871;
+    resize: none;
+}
+
+.encritador:focus,
+.desencritador{
+    outline: none;
+}
+::placeholder{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color:#0A3871;    
+}
+
+.advertencia{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    display: flex;
+    color: #495057;
+    opacity: 0.8px;
+
+}
+.btn__encritar{    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 16px;
+}
+.btn__1{   
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 24px;
+    border: solid 1px;
+    width: 328px;
+    padding: 24px;   
+    background-color: #0A3871;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.btn__2{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 24px;
+    border: solid 1px;
+    width: 328px;
+    height: 67px;    
+    background-color: #D8DFE8;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.btn__1:hover,
+.btn__2:hover,
+.btn__copiar:hover{
+    transform: scale(0.99);
+}
+
+.desencritador__1{
+    position: relative;
+    width: 400px;
+    height: 944px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 32px;
+    background-color: #FFF;
+    box-shadow: 5px 12px 32px -20px;
+}
+
+.dentro__desen{
+    width: 350px;
+    height: 790px;
+    margin: auto;
+    margin-top: 40px;
+    background: #FFF;
+    border-radius: 32px;
+}
+
+.imagenMu{
+    background: #fff;
+    margin-top: 150px;
+}
+
+.texto1{
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+    color: #343A40;
+    margin-top: 32px;
+}
+
+.texto2{
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #495057;
+    margin-top: 16px;
+}
+
+.desencritador{
+    width: 88%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    background: transparent;
+    border-radius: 32px;
+    border: none;
+    color: #000;
+    resize: none;
+}
+
+.btn__copiar{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 24px;
+    border: solid 1px;
+    width: 328px;
+    height: 67px;    
+    background-color: #fff;
+    color: #0A3871;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+footer p{
+    margin-top: 50px;
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    background-color: #495057;
+    color: #FFF;
+}
+
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;                
+    }
+    .formulario{
+        margin-left: 80px;
+    }
+    .textarea__1{
+        margin: 68px 0 0 0;
+        display: flex;
+        flex-direction: column;        
+        width: 100%;
+    }
+    .btn__encritar{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .desencritador__1{
+        width: 100%;
+        height: 163px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dentro__desen{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .imagenMu{
+        display: none;
+    }
+    .desencritador{
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+    }
+    .btn__copiar{
+        position: inherit;
+        width: 100%;
+    }
+ 
+}
+
+@media(max-width: 720px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;                
+    }
+    .formulario{
+        margin-left: 35px;
+    }
+    .textarea__1{
+        align-items: center;
+        width: 100%;
+    }
+    .btn__encritar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 24px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Challenge</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="./imagenes/Vector.png" alt="Logo Alura">
+        </div>
+    </header>
+
+    <main class="formulario">
+        <section class="textarea__1">
+            <textarea class="encritador" cols="20" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="advertencia">
+                <img src="./imagenes/bi_exclamation-circle-fill.png" alt="exclamacion">
+                <h6 class="titulo__encritador">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="btn__encritar">
+                <button class="btn__1" type="submit">Encriptar!</button>
+                <button class="btn__2" type="submit">Desencriptar!</button>
+            </div>
+        </section>
+        <section class="desencritador__1">
+            <div class="dentro__desen">
+                <img src="./imagenes/Muñeco.png" alt="imagen muñeco" class="imagenMu">
+                <p class="texto1">Ningún mensaje fue encontrado</p>
+                <p class="texto2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="desencritador" type="mensaje"></textarea>
+            <button type="submit" class="btn__copiar">Copiar</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Diseñado por Jimmy sosa </p>
+    </footer>
+</body>
+</html>
