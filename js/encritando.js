@@ -46,6 +46,7 @@ btnEncritar.addEventListener("click", (e) =>{
     textDesEncritar.textContent = mensajeEncritado;
     texto1.textContent = "Mensaje Encritado!";
     btnCopiar.style.visibility = "visible";
+    texto2.textContent = "";
 })
 
 btnDesencritar.addEventListener("click", (e) =>{
