@@ -59,7 +59,7 @@ btnDesencritar.addEventListener("click", (e) =>{
 btnCopiar.addEventListener("click", (e) =>{
     let copiar = textDesEncritar.textContent;
     navigator.clipboard.writeText(copiar).then(()=>{
-        muneco.style.display = "block";
+        
         texto1.textContent = "Texto copiado!";
         btnCopiar.style.visibility = "hidden";
     })
