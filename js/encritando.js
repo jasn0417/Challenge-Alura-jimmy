@@ -7,6 +7,7 @@ const muneco = document.querySelector(".imagenMu");
 const texto2 = document.querySelector(".texto2");
 const texto1 = document.querySelector(".texto1");
 const btnCopiar = document.querySelector(".btn__copiar");
+const advertencia = document.querySelector(".titulo__encritador");
 
 
 
@@ -42,11 +43,46 @@ textArea.addEventListener("input", (e) =>{
 
 btnEncritar.addEventListener("click", (e) =>{
     let mensaje = textArea.value;
+    let caracteres = mensaje.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`;,\u0300-\u036f']/g, " " );
+    
+    if(mensaje == ""){
+        advertencia.style.background = "#0A3871";
+        advertencia.style.color = "#FFF";
+        advertencia.style.fontWeight ="700";
+        advertencia.textContent ="No puede estar vacio en campo de texto";
+        setTimeout(()=>{
+            advertencia.removeAttribute("style");
+        },1500);
+    }
+
+    else if(mensaje !== caracteres){
+        advertencia.style.background = "#0A3871";
+        advertencia.style.color = "#FFF";
+        advertencia.style.fontWeight ="700";
+        advertencia.textContent ="No puede tener caracteres especiales";
+        setTimeout(()=>{
+            advertencia.removeAttribute("style");
+        },1500)
+    } 
+
+    else if(mensaje !== mensaje.toLowerCase()){
+        advertencia.style.background = "#0A3871";
+        advertencia.style.color = "#FFF";
+        advertencia.style.fontWeight ="700";
+        advertencia.textContent ="El texto debe ir todo en minusculas";
+        setTimeout(()=>{
+            advertencia.removeAttribute("style");
+        },1500)
+    }
+    
+    else {
+
     let mensajeEncritado = encritando(mensaje);
     textDesEncritar.textContent = mensajeEncritado;
     texto1.textContent = "Mensaje Encritado!";
     btnCopiar.style.visibility = "visible";
     texto2.textContent = "";
+    }
 })
 
 btnDesencritar.addEventListener("click", (e) =>{
